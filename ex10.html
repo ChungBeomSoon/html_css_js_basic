@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>object</h1>
+    <h2>create</h2>
+
+    <script>
+      var coworkers = {
+        'programer':'egoing',
+        'designer':'leezche'
+      };
+      document.write('programer :'+coworkers.programer+'<br>');
+      document.write('designer :'+coworkers.programer+'<br>');
+      coworkers.bookkeeper = 'duru';
+      document.write('bookkeeper : '+coworkers.bookkeeper+'<br>');
+      coworkers['data scientist'] = 'taeho';
+      document.write('data scientist : '+coworkers['data scientist']+'<br>');
+
+
+    </script>
+
+    <h2>iterate</h2>
+    <script>
+      for(var variable in coworkers){
+        document.write(variable+':'+coworkers[variable]+'<br>');
+      }
+    </script>
+
+
+    <h2>property & Method</h2>
+    <script>
+      coworkers.showAll = function (){
+        for(var variable in this){
+          document.write(variable+':'+this[variable]+'<br>');
+      }
+    }
+    coworkers.showAll();
+    </script>
+  </body>
+</html>
